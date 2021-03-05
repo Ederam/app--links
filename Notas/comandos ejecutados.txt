@@ -1,0 +1,82 @@
+------------------------
+NOTAS GENERALES DEL PROYECTO
+
+ruta en Git
+https://github.com/FaztTech/nodejs-mysql-links/tree/version-2018/src
+
+iniciar el proyecto
+npm init --yess
+
+instalacion de framework para node
+express es el framework de node para creacion de aplicaciones backend
+y un complementoexpress-handlebars: integracion del motor de plantillas handlebars en express
+otras opciones son jade, pug, ejs, jinja, etc
+adicional un modulo para guardar la sesion dentro de express, express-session
+Adicional modulo para conectar a la base de datos de mysql con mysql
+adicional modulo para guaradar la sesiones de mysql en express
+adicional modulo para mostrar peticiones que van llegando al servidor, morgan
+adicional modulo para encryptar contraseñas, bcryptjs
+adicional modulo para la autenticacion en node, passport utilizando autenticacion local passport-local
+adicional modulo que permita manejar fechas convierte los timestamps o fechas de BD en formato 2 mnutea ago, 2 hour ago, etc, timeagojs
+adicional moculo para enviar mensajees entre vistas, connect-flash
+adicional modulo para realizar validaciones de los datos que el usuario envia desde el cliente, express-validator
+npm i express express-handlebars express-session mysql express-mysql-session morgan bcryptjs passport passport-local timeagojs connect-flash express-validator
+
+adicion de modulo solo para desarrollo
+npm i nodemon -D
+
+Luego me ubico en la ruta de src para crear por linea varias carpetas
+mkdir lib public routes views
+
+se configura index.ts para inicializar, demas configuraciones, ejecucion de aplicacion, etc
+
+Configuracion en package.json
+quitamos la linea: "test": "echo \"Error: no test specified\" && exit 1"
+y la dejamos
+"dev": "nodemon src/"  //si el archivo no se llama index.ts se coloca el nombre del archivo
+
+luego en la consola 
+npm run dev
+
+---crear seccion de rutas
+en carpeta routes se crea un archivo index.json
+
+--en cuanto a errores usando app.use()
+se presenta por no exportar y agregar el express a esos archivos que menciona el error
+
+---EJECUTAR SQL EN CONSOLA
+mysql -u root -p
+digita el password
+y luego pega el script y entre
+
+para ver las bases de datos
+show database
+
+----ERROR AL EJECUTAR QUERY DESDE nodejs
+UnhandledPromiseRejectionWarning: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+
+--POSIBLE SOLUCION
+Ejecutar en Wokbeanch
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '2021'
+
+flush privileges;
+ no funciono ahora se ejecuta si localhost
+
+ ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY '2021'
+
+flush privileges;
+
+para ver sql en la consola
+mysql -u root -p
+digita password
+
+USE database_links
+SHOW TABLES
+
+
+--HAY QUE VALIDAR PORQUE NO CARGA EL LOGO
+
+
+
+
+

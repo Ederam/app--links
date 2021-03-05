@@ -1,0 +1,44 @@
+INSTRUCCIONES PARA SUBIR ARCHIVOS AL SERVIDOR
+
+https://www.youtube.com/watch?v=5ShmO9KSwd4
+
+--------------------------------------------
+Dependencias necesarias
+    express 
+    path 
+    multer 
+    morgan
+
+instalar multer que aun no se ha instalado
+npm i -S multer
+
+Crear carpeta donde se van a subir los ARCHIVOS
+
+importar express
+importar path
+importar multer  -- para el formato dela fichero
+
+la funcionalidad se prueba inicialmente desde postman por post
+http://localhost:4000/utils/exportpdf
+
+----Subir un archivo con NodeJS, express & Angular
+https://www.youtube.com/watch?v=-BVrRGrBhBA
+
+utiliza dependencia body-parser, connect-multiparty
+npm i body-parser connect-multiparty
+
+se agragn las constantes
+const bodyParser = require('body-parser');
+const multipart = require('connect-multiparty');
+
+const multiPartMiddleware = multipart({
+    uploadDir: './subidas'
+});
+
+
+-------Como subir archivos al servidor en Nodejs con Multer
+https://www.youtube.com/watch?v=MnYxElyhI4w
+6:36
+
+
+ 

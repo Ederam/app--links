@@ -1,0 +1,23 @@
+
+Pagina pdfkit.org
+
+Instalacion de paquete
+npm i pdfkit
+
+Se va a utilizar el modulo fs
+
+importacion
+const PDF = require('pdfkit');
+const fs =  require('fs');
+
+var doc = new PDF();
+
+doc.pipe(fs.createWriteStream(__dirname + '/example.pdf'));
+
+doc.end();
+
+ctrl +u ctrl+ y
+
+
+
+

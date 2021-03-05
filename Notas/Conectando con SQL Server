@@ -1,0 +1,4 @@
+
+Instalacion de paquete para poder realizar consultas a SQL server
+npm install --save rest-mssql-nodejs
+
